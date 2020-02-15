@@ -4,6 +4,7 @@ import {Node} from '../modules/Node.js';
 
 export const head = Symbol('head');
 export const size = Symbol('size');
+//单向链表
 export class LinkedList{
   constructor(){
     this[head] = undefined;

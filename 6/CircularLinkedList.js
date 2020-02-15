@@ -15,6 +15,7 @@ function getTail(){
   return current;
 }
 
+//循环单向链表
 export class CircularLinkedList extends LinkedList{
   constructor(){
     super();  //this[head];this[size]

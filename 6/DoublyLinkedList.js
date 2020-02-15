@@ -54,7 +54,7 @@ function navigateToIndex(index){
   return current;
 }
 
-//双向链表类
+//双向链表
 export class DoublyLinkedList{
   constructor(){
     this[head] = undefined;
