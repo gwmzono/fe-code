@@ -14,7 +14,10 @@
 // aa.push(4);
 
 // import {MySet} from './7/MySet.js';
-// window.aa = new MySet('12345');
+// window.aa = new MySet([1,2,3,4,5]);
+// window.bb = new MySet([1,2,3,4,5,6,7]);
 
 import {SubSet} from './7/SubSet.js';
 window.aa = new SubSet('12345');
+window.bb = new SubSet('34567');
+window.cc = new SubSet('1234567');

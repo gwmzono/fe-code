@@ -49,4 +49,59 @@ export class MySet{
     this.items = [];
     return true;
   }
+  
+  //并集
+  union(otherSet){
+    if(!(otherSet instanceof MySet)){
+      return false;
+    }
+    let temp = this.items;
+    for(let i of otherSet.items){
+      if(!this.has(i)){
+        temp.push(i);
+      }
+    }
+    const newSet = new MySet(temp);
+    return newSet;
+  }
+  //交集
+  intersect(otherSet){
+    if(!(otherSet instanceof MySet)){
+      return false;
+    }
+    let temp = [];
+    for(let i of otherSet.items){
+      if(this.has(i)){
+        temp.push(i);
+      }
+    }
+    const newSet = new MySet(temp);
+    return newSet;
+  }
+  //差集(a-b) a中有b中没有
+  difference(otherSet){
+    if(!(otherSet instanceof MySet)){
+      return false;
+    }
+    let temp = [];
+    for(let i of this.items){
+      if(!otherSet.has(i)){
+        temp.push(i);
+      }
+    }
+    const newSet = new MySet(temp);
+    return newSet;
+  }
+  //子集
+  isSubsetOf(otherSet){
+    if(!(otherSet instanceof MySet)){
+      return false;
+    }
+    for(let i of this.items){
+      if(!otherSet.has(i)){
+        return false;
+      }
+    }
+    return true;
+  }
 }
