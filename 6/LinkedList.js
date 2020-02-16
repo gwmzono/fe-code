@@ -13,6 +13,19 @@ export class LinkedList{
   get size(){
     return this[size];
   }
+  getHead(){
+    return this[head];
+  }
+  getTail(){
+    if(this.size === 0){
+      return undefined;
+    }
+    let current = this[head];
+    while(current.next !== undefined){
+      current = current.next;
+    }
+    return current;
+  }
   push(el){
     //检查参数
     if(el === undefined || el === null){

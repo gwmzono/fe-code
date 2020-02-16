@@ -14,7 +14,8 @@ function indexIsValid(index){  //检测数字合法性
   }
   return true;
 }
-//深拷贝
+
+//深拷贝, 不拷贝原型方法和属性
 function deepCopy(obj){
   //由于空数组和空对象转换成bool都是true, getSize获取他们的长度
   function getSize(a){
@@ -46,4 +47,17 @@ function deepCopy(obj){
   return temp;
 }
 
-export {elIsValid, indexIsValid, deepCopy};
+//djb2散列算法,产生数字键
+function djb2HashCode(key){
+  if(typeof key !== 'number' && typeof key !== 'string'){
+    return false;
+  }
+  const tableKey = key.toString();
+  let hash = 5381;
+  for (let i = 0; i < tableKey.length; i++) {
+    hash = (hash * 33) + tableKey.charCodeAt(i);
+  }
+  return hash % 1013;
+}
+
+export {elIsValid, indexIsValid, deepCopy, djb2HashCode};

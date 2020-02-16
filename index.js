@@ -21,7 +21,8 @@
 // window.bb = new MySet('34567');
 // window.cc = new MySet('1234567');
 
-import {ObjMap} from './8/ObjMap.js';
+// import {ObjMap} from './8/ObjMap.js';
+import {HashMap} from './8/HashMap.js'
 
-window.aa = new ObjMap([['a',1,2,3],['b',2]]);
-window.bb = new ObjMap(aa);
+// window.aa = new ObjMap([['a',1,2,3],['b',2]]);
+window.aa = new HashMap();
