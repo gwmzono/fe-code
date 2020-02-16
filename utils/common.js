@@ -14,4 +14,36 @@ function indexIsValid(index){  //检测数字合法性
   }
   return true;
 }
-export {elIsValid, indexIsValid};
+//深拷贝
+function deepCopy(obj){
+  //由于空数组和空对象转换成bool都是true, getSize获取他们的长度
+  function getSize(a){
+    if(a instanceof Array){
+      return a.length;
+    }
+    let len = 0;
+    for(let i in a){
+      len++;
+    }
+    return len;
+  }
+  //不是数组或对象, 直接返回
+  if(typeof obj !== 'object'){
+    return obj;
+  }
+  //空数组或对象直接返回
+  if(getSize(obj) === 0){
+    return JSON.parse(JSON.stringify(obj));
+  }
+  //下面递归处理
+  let temp = Array.isArray(obj) ? [] : {};
+  for(let i in obj){
+    if(obj.hasOwnProperty(i)){
+      //排除原型属性和方法的复制
+      temp[i] = deepCopy(obj[i]);
+    }
+  }
+  return temp;
+}
+
+export {elIsValid, indexIsValid, deepCopy};
