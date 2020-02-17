@@ -22,7 +22,15 @@
 // window.cc = new MySet('1234567');
 
 // import {ObjMap} from './8/ObjMap.js';
-import {HashMap} from './8/HashMap.js'
+// import {HashMap} from './8/HashMap.js'
 
 // window.aa = new ObjMap([['a',1,2,3],['b',2]]);
-window.aa = new HashMap();
+// window.aa = new HashMap();
+
+import {BinaryTree} from './10/BinaryTree.js';
+
+window.aa = new BinaryTree()
+for(let i = 0; i < 10; i++){
+  const num = Math.round(Math.random()*30);
+  aa.insert(num);
+}
