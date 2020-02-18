@@ -11,8 +11,8 @@ function quick(arr, left, right, fn){
   }
   let i = left;
   let j = right;
-  // let pivot = arr[Math.floor((left+right) / 2)];
-  let pivot = arr[Math.ceil((left+right) /2)];
+  let pivot = arr[Math.floor((left+right) / 2)];
+  // let pivot = arr[Math.ceil((left+right) /2)];
   while(i <= j){
     while(fn(arr[i], pivot) === -1){
       i++;
@@ -27,18 +27,18 @@ function quick(arr, left, right, fn){
       i++;j--;
     }
   }
-  // if(left < i - 1){
-  //   quick(arr, left, i-1, fn);
-  // }
-  // if(i < right){
-  //   quick(arr, i, right, fn);
-  // }
-  if(left < j){
-    quick(arr, left, j, fn);
+  if(left < i - 1){
+    quick(arr, left, i-1, fn);
   }
-  if(j+1 < right){
-    quick(arr, j+1, right, fn);
+  if(i < right){
+    quick(arr, i, right, fn);
   }
+  // if(left < j){
+  //   quick(arr, left, j, fn);
+  // }
+  // if(j+1 < right){
+  //   quick(arr, j+1, right, fn);
+  // }
   return arr;
 }
 

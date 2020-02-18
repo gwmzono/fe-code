@@ -33,12 +33,16 @@
 // import {selectionSort} from './13/selectionSort.js'
 // import {insertionSort} from './13/insertionSort.js';
 // import {mergeSort} from './13/mergeSort.js';
-import {quickSort} from './13/quickSort.js';
+// import {quickSort} from './13/quickSort.js';
 // import {countingSort} from './13/countingSort.js';
+// import {binarySearch} from './13/binarySearch.js';
+// import {shuffle} from './13/shuffle.js';
 // let arr = [2,10,30,7,6,14,28,29,13,11,5,23,26,1,9];
-let arr = [];
-for(let i = 0; i < 2000000; i++){
-  arr.push(Math.round(Math.random()*100));
-}
-console.log(arr);
-console.log(quickSort(arr));
+// let arr = [];
+// for(let i = 0; i < 2000000; i++){
+//   arr.push(Math.round(Math.random()*100));
+// }
+// console.log(quickSort(arr));
+// console.log(arr);
+// console.log(shuffle(arr));
+// console.log(arr.sort(function(a,b){return a<b?1:-1;}));
