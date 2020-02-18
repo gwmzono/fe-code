@@ -109,6 +109,7 @@ function deleteNode(node, el, fn){
   }
 }
 
+//二叉搜索数(BST)
 export class BinaryTree{
   constructor(compareFn = defaultCompare){
     this.root = undefined;
