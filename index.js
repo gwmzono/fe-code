@@ -1,3 +1,4 @@
+//第6章, 链表
 // import {LinkedList} from './6/LinkedList.js';
 // window.aa = new LinkedList();
 // import {DoublyLinkedList} from './6/DoublyLinkedList.js';
@@ -10,6 +11,7 @@
 // aa.push(3);
 // aa.push(4);
 
+//第7章, 集合
 // import {ArrSet} from './7/ArrSet.js';
 // import {MySet} from './7/MySet.js';
 // window.aa = new ArrSet('123456321');
@@ -17,18 +19,21 @@
 // window.bb = new MySet('34567');
 // window.cc = new MySet('1234567');
 
+//第8章, 字典
 // import {ObjMap} from './8/ObjMap.js';
 // import {HashMap} from './8/HashMap.js'
 // window.aa = new ObjMap([['a',1,2,3],['b',2]]);
 // window.aa = new HashMap();
 
-// import {BinaryTree} from './10/BinaryTree.js';
-// window.aa = new BinaryTree()
-// for(let i = 0; i < 10; i++){
-//   const num = Math.round(Math.random()*30);
-//   aa.insert(num);
-// }
+//第10章, 二叉树
+import {BinaryTree} from './10/BinaryTree.js';
+window.aa = new BinaryTree()
+for(let i = 0; i < 10; i++){
+  const num = Math.round(Math.random()*30);
+  aa.insert(num);
+}
 
+//第13章, 排序算法
 // import {bubbleSort} from './13/bubbleSort.js';
 // import {selectionSort} from './13/selectionSort.js'
 // import {insertionSort} from './13/insertionSort.js';
@@ -46,3 +51,11 @@
 // console.log(arr);
 // console.log(shuffle(arr));
 // console.log(arr.sort(function(a,b){return a<b?1:-1;}));
+
+//LeetCode
+// import {test} from './leetcode/';
+// import {test} from './leetcode/0020.js';
+// import {test} from './leetcode/0026.js';
+import {test} from './leetcode/0104.js';
+
+window.test = test;
