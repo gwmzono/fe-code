@@ -26,12 +26,12 @@
 // window.aa = new HashMap();
 
 //第10章, 二叉树
-import {BinaryTree} from './10/BinaryTree.js';
-window.aa = new BinaryTree()
-for(let i = 0; i < 10; i++){
-  const num = Math.round(Math.random()*30);
-  aa.insert(num);
-}
+// import {BinaryTree} from './10/BinaryTree.js';
+// window.aa = new BinaryTree()
+// for(let i = 0; i < 10; i++){
+//   const num = Math.round(Math.random()*30);
+//   aa.insert(num);
+// }
 
 //第13章, 排序算法
 // import {bubbleSort} from './13/bubbleSort.js';
@@ -56,6 +56,6 @@ for(let i = 0; i < 10; i++){
 // import {test} from './leetcode/';
 // import {test} from './leetcode/0020.js';
 // import {test} from './leetcode/0026.js';
-import {test} from './leetcode/0104.js';
+import {test} from './leetcode/0122.js';
 
 window.test = test;
