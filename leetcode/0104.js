@@ -1,6 +1,6 @@
 /*
 **  maximum-depth-of-binary-tree
-**  返回二叉树的最大深度
+**  返回二叉树的最大深度, 用10章的BinaryTree类可以做例子
 **  @param  {TreeNode}  node
 **  @return {Number}
 */

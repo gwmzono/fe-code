@@ -22,6 +22,7 @@
 // }
 
 //O(n), 不好理解
+//任何一个子序列和(m, n), 都可以用(0, n)减去(0, m)得到
 //min代表前面出现过的最小序列和, sum是指0到当前位置的和, sum-min就是所有可能的最大和
 export function test(arr){
   const len = arr.length;

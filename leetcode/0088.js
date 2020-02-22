@@ -14,7 +14,7 @@ export function test(arr1, m, arr2, n){
     let current = m-1;
     //如果不需要插入, 直接后缀
     if(arr2[i] >= arr1[current]){
-      arr1[current+1] = arr2[i];
+      arr1[m] = arr2[i];
       m++;
       continue;
     }
