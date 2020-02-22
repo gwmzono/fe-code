@@ -41,7 +41,7 @@ function postOrderTraverseNode(node, callback){
     callback(node.el);
   }
 }
-
+//最小值
 function minNode(node){
   if(node !== undefined){
     if(node.left === undefined){
@@ -77,7 +77,7 @@ function searchNode(node, el){
   return false;
 }
 
-//还是书上的设计最巧妙
+//还是书上的设计最巧妙, 头递归
 function deleteNode(node, el, fn){
   if(node===undefined){
     return undefined;

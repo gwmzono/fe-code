@@ -26,12 +26,31 @@
 // window.aa = new HashMap();
 
 // 第10章, 二叉树
-import {BinaryTree} from './10/BinaryTree.js';
-window.aa = new BinaryTree()
-for(let i = 0; i < 6; i++){
-  const num = Math.round(Math.random()*30);
-  aa.insert(num);
+// import {BinaryTree} from './10/BinaryTree.js';
+// window.aa = new BinaryTree()
+// for(let i = 0; i < 6; i++){
+//   const num = Math.round(Math.random()*30);
+//   aa.insert(num);
+// }
+
+// 第11章, 二叉堆
+// import {MinHeap} from './11/MinHeap.js';
+// import {MaxHeap} from './11/MaxHeap.js';
+// window.aa = new MaxHeap();
+
+// 第12章, 图, 博大精深
+import {Graph} from './12/Graph.js';
+let arr = ['a', 'b', 'c', 'e', 'g', 'i', 'k', 'm'];
+window.aa = new Graph();
+for(let i of arr){
+  aa.addVertex(i);
 }
+aa.addEdge('a', 'e');
+aa.addEdge('a', 'e');
+aa.addEdge('a', 'g');
+aa.addEdge('b', 'k');
+aa.addEdge('c', 'i');
+aa.addEdge('e', 'm');
 
 //第13章, 排序算法
 // import {bubbleSort} from './13/bubbleSort.js';
@@ -56,6 +75,6 @@ for(let i = 0; i < 6; i++){
 // import {test} from './leetcode/';
 // import {test} from './leetcode/0020.js';
 // import {test} from './leetcode/0026.js';
-import {test} from './leetcode/0226.js';
+// import {test} from './leetcode/0226.js';
 
-window.test = test;
+// window.test = test;
