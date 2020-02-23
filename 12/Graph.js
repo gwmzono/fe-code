@@ -1,3 +1,32 @@
+const COLOR = {   //预设颜色常量, 更便于记忆
+  WHITE: 0,
+  GREY : 1,
+  BLACK: 2,
+}
+
+function initColor(vertices){
+  if(!Array.isArray(vertices)){
+    return false;
+  }
+  let color = new Map();
+  for(let i of vertices){
+    color.set(i, COLOR.WHITE);
+  }
+  return color;
+}
+
+function DFSRecursion(start, color, callback){
+  let children = this.dict.get(start);
+  color.set(start, COLOR.BLACK);
+  callback.call(this, start);
+  for(let i of children){
+    if(color.get(i) === COLOR.WHITE){
+      color.set(i, COLOR.GREY);
+      DFSRecursion.call(this, i, color, callback);
+    }
+  }
+}
+
 //图,相关概念看书
 export class Graph{
   constructor(isDirected = false){
@@ -47,5 +76,38 @@ export class Graph{
       let temp = `${item[0]} -> ${item[1].join(', ')}`;
       console.log(temp);
     }
+  }
+  
+  //广度优先遍历(breadth-first search)
+  BFS(start, callback){
+    let color = initColor(this.vertices);
+    if(!color)    return 'vertices is not valid!';
+    if(this.vertices.indexOf(start) === -1) return 'start is not exist!';
+    if(typeof callback !== 'function')      return 'param 2 should be function!';
+    let queue = [];
+    queue.push(start);
+    color.set(start, COLOR.GREY);
+    //每次先弹出最前端的, 再将它是白色的的后代进队列, 最后调用这个弹出的元素
+    while(queue.length > 0){
+      let current = queue.shift();
+      let children = this.dict.get(current);
+      for(let i of children){
+        if(color.get(i) === COLOR.WHITE){   //是白色就压入队列
+          color.set(i, COLOR.GREY);
+          queue.push(i);
+        }
+      }
+      callback.call(this,current);
+      color.set(current, COLOR.BLACK);
+    }
+  }
+  
+  //深度优先遍历(depth-first search)
+  DFS(start, callback){
+    let color = initColor(this.vertices);
+    if(!color)    return 'vertices is not valid!';
+    if(this.vertices.indexOf(start) === -1)   return 'start is not exist!';
+    if(typeof callback !== 'function')      return 'param 2 should be function!';
+    DFSRecursion.call(this, start, color, callback);
   }
 }

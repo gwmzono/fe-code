@@ -39,18 +39,27 @@
 // window.aa = new MaxHeap();
 
 // 第12章, 图, 博大精深
-import {Graph} from './12/Graph.js';
-let arr = ['a', 'b', 'c', 'e', 'g', 'i', 'k', 'm'];
-window.aa = new Graph();
-for(let i of arr){
-  aa.addVertex(i);
-}
-aa.addEdge('a', 'e');
-aa.addEdge('a', 'e');
-aa.addEdge('a', 'g');
-aa.addEdge('b', 'k');
-aa.addEdge('c', 'i');
-aa.addEdge('e', 'm');
+// import {Graph} from './12/Graph.js';
+// window.aa = new Graph();
+// aa.addEdge('a', 'b');
+// aa.addEdge('a', 'e');
+// aa.addEdge('a', 'c');
+// aa.addEdge('b', 'g');
+// aa.addEdge('e', 'i');
+// aa.addEdge('c', 'g');
+// aa.addEdge('c', 'i');
+// aa.addEdge('g', 'k');
+// aa.addEdge('i', 'k');
+// aa.addEdge('m', 'k');
+// import {Dijkstra} from './12/Dijkstra.js';
+// import {floydWarshall} from './12/floydWarshall.js';
+// const graph = [ [0, 2, 4, 0, 0, 0],
+//                 [0, 0, 1, 4, 2, 0],
+//                 [0, 0, 0, 0, 3, 0],
+//                 [0, 0, 0, 0, 0, 2],
+//                 [0, 0, 0, 3, 0, 2],
+//                 [0, 0, 0, 0, 0, 0] ];
+// console.log(floydWarshall(graph));
 
 //第13章, 排序算法
 // import {bubbleSort} from './13/bubbleSort.js';
@@ -70,6 +79,12 @@ aa.addEdge('e', 'm');
 // console.log(arr);
 // console.log(shuffle(arr));
 // console.log(arr.sort(function(a,b){return a<b?1:-1;}));
+
+//第14章
+// import {binarySearch} from './14/binarySearch.js';
+// import {minCoin} from './14/minCoin.js';
+import {maxValueBag} from './14/maxValueBag.js';
+window.aa = maxValueBag;
 
 //LeetCode
 // import {test} from './leetcode/';
