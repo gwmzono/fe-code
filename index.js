@@ -83,8 +83,8 @@
 //第14章
 // import {binarySearch} from './14/binarySearch.js';
 // import {minCoin} from './14/minCoin.js';
-import {maxValueBag} from './14/maxValueBag.js';
-window.aa = maxValueBag;
+import {LSC} from './14/LSC.js';
+window.aa = LSC;
 
 //LeetCode
 // import {test} from './leetcode/';
