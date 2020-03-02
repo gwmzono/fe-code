@@ -20,8 +20,8 @@ function merge(left, right, fn){
 export function mergeSort(arr, fn = defaultCompare){
   if(arr.length>1){
     let middle = Math.floor(arr.length/2);
-    let left = mergeSort(arr.slice(0,middle), fn);
-    let right = mergeSort(arr.slice(middle,arr.length), fn);
+    let left = mergeSort(arr.slice(0, middle), fn);
+    let right = mergeSort(arr.slice(middle, arr.length), fn);
     arr = merge(left, right, fn);
   }
   return arr;

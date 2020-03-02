@@ -83,13 +83,26 @@
 //第14章
 // import {binarySearch} from './14/binarySearch.js';
 // import {minCoin} from './14/minCoin.js';
-import {LSC} from './14/LSC.js';
-window.aa = LSC;
+// import {LSC} from './14/LSC.js';
+// import {minCoin} from './14/minCoin2.js';
+// import {maze} from './14/maze.js'
+// let arr = [
+//   [1,1,0,0,1,0,0,0,1,0],
+//   [0,1,1,1,1,0,0,0,1,1],
+//   [0,0,1,0,1,1,1,0,1,0],
+//   [0,1,1,0,0,0,1,0,1,1],
+//   [1,1,0,0,0,0,1,0,1,0],
+//   [0,1,1,1,0,1,1,1,1,1],
+//   [0,1,0,1,0,0,1,0,1,0],
+//   [1,1,0,1,0,0,1,0,1,1],
+//   [0,0,1,1,0,1,1,0,0,1],
+//   [0,0,1,0,0,1,0,0,0,1],
+// ];
+// console.log(maze(arr));
+// window.aa = maze;
 
 //LeetCode
 // import {test} from './leetcode/';
-// import {test} from './leetcode/0020.js';
-// import {test} from './leetcode/0026.js';
-// import {test} from './leetcode/0226.js';
+// import {reduce} from './leetcode/0371.js';
 
-// window.test = test;
+// window.aa = reduce;
